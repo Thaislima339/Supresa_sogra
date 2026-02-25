@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffe2e2 0%, #fad0c4 99%, #fad0c4 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+    text-align: center;
+    color: #5d5d5d;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+    width: 400px;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    color: #ff6b81;
+}
+
+.heart-container {
+    font-size: 80px;
+    cursor: pointer;
+    margin: 20px 0;
+    animation: beat 1.5s infinite;
+}
+
+.btn-hug {
+    background-color: #ff9a9e;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Fredoka One', cursive;
+}
+
+#special-message {
+    display: none;
+    margin-top: 20px;
+    color: #ff6b81;
+    font-weight: bold;
+    background: #fff0f5;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+@keyframes beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.floating-heart {
+    position: absolute;
+    font-size: 2rem;
+    pointer-events: none;
+    animation: floatUp 3s linear forwards;
+    opacity: 0;
+}
+
+@keyframes floatUp {
+    0% { opacity: 1; transform: translateY(0) scale(0.5); }
+    100% { opacity: 0; transform: translateY(-100vh) scale(1); }
+}
